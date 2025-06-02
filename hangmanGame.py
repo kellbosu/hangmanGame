@@ -68,7 +68,7 @@ while game_over is not True:
     else:
         for i, letter in enumerate(game_word):
             if letter == guess:
-                spaces_left[i] = guess
+                spaces_left[i] = guess + " "
         if "_ " not in spaces_left:
             concat_word()
             you_won = True
@@ -76,6 +76,7 @@ while game_over is not True:
             break
 
 if you_won == True:
+    print(f'You guessed "{game_word}" without dying!')
     print("""
       //////////
       YOU WON!
